@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 2;
+    display: flex;
+    color: antiquewhite;
+    background-color: rgb(94, 94, 94);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.toggle-btn{
+    top: 1.5rem;
+    right: 3rem;
+    position: fixed;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    color: antiquewhite;
+    transition: all 0.3s linear;
+}
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    transform: translate(-100%);
+    transition: all 0.3s linear;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    margin: 10px;
+    font-size: 28px;
+    border-bottom: 3px solid rgb(58, 41, 38);
+}
+
+.close-btn{
+    margin: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.toggle-btn:hover{
+    transform: rotate(90deg);
+    color: tomato;
+}
+
+.close-btn:hover{
+    transform: rotate(90deg);
+    color: tomato;
+}
+
+.links {
+    height: 100%;
+    width: 100%;
+}
+
+.links a {
+    margin: 5px;
+    width: 100%;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px;
+    color: antiquewhite;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.links li {
+    display: flex;
+    width: 400px;
+}
+
+.links a:hover{
+    background: rgb(193, 210, 216);
+    color: tomato;
+    padding-left: 1rem;
+
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.social-icons li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 22px;
+    color: antiquewhite;
+}
+
+.social-icons a:hover{
+    color: tomato;
+    transition: all 0.3s linear;
+    transform: scale(1.4);
+}
+
+@media screen and (max-width: 600px){
+
+    .sidebar{
+        width: 400px;
+    }
+}
